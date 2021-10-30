@@ -3,5 +3,6 @@ dict = {
   'k2': 2
 }
 
-print(dict)
-print(len(dict))
+print(f"len(dict): {len(dict)}")
+print(f"dict['k1']:{dict['k1']}")
+

@@ -22,6 +22,12 @@ print("# 逆順")
 for num in range(10, 0 , -1):
   print("hello world" + str(num))
 
+# range(start, stop, -step)
+print("--range(start, stop, -step)")
+strings = "hello world"
+for num in range(len(strings)-1, 0 , -1):
+  print(strings[num])
+
 print("# list")
 
 # list(start, stop, -step)
