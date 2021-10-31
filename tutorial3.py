@@ -61,13 +61,15 @@ model = tf.keras.Sequential(
 )
 # model.summary()
 
+train_images = train_images / 255
+
 model.compile(optimizer='adam', #どうやって学習を最適化するかを決定
               loss='sparse_categorical_crossentropy', #どうやって損失を定義するかを決定
               metrics=['accuracy']) #メトリックはとりあえずaccuracyを選んでおけば良い
 model.fit(train_images, train_labels, epochs=5)
 
-# test_loss, test_acc = model.evaluate(test_images, test_labels, verbose=2)
-# print(f"\nTest accuracy:{test_loss}")
+test_loss, test_acc = model.evaluate(test_images, test_labels, verbose=2)
+print(f"\nTest accuracy:{test_acc}")
 
 predictions = model.predict(test_images)
 
